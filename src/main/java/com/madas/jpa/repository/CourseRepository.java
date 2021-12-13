@@ -1,4 +1,4 @@
-package com.madas.jpa.dao;
+package com.madas.jpa.repository;
 
 import com.madas.jpa.entity.Course;
 import org.springframework.beans.factory.annotation.Autowired;

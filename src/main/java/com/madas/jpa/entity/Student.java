@@ -16,6 +16,9 @@ public class Student {
     @Column(nullable = false)
     private String name;
 
+    @OneToOne
+    private Passport passport;
+
     public Student(String name) {
         this.name = name;
     }
@@ -35,11 +38,20 @@ public class Student {
         return id;
     }
 
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public void setPassport(Passport passport) {
+        this.passport = passport;
+    }
+
     @Override
     public String toString() {
         return "\nStudent{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", passport=" + passport +
                 '}';
     }
 }
